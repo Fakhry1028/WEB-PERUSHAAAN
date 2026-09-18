@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. Surya Graha Selaras | Pembangunan Fasilitas Industri</title>
+    <meta name="description" content="Dokumentasi pengerjaan struktur beton dan sipil pembangunan fasilitas industri oleh PT. Surya Graha Selaras.">
+    <link rel="icon" type="image/png" href="LOGO SGS.png" sizes="48x48">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { navy: '#004B87', navyLight: '#0066B3', crimson: '#D90429', crimsonHover: '#EF233C', offWhite: '#F0F8FF', slate: '#99C2E6' }
+                    },
+                    fontFamily: { sans: ['Roboto', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Roboto', sans-serif; -webkit-font-smoothing: antialiased; color: #333; }
+        h1, h2, h3, h4, .font-serif { font-family: 'Playfair Display', serif; }
+        .glass-nav { background: rgba(0, 75, 135, 0.95); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .hover-underline { position: relative; text-decoration: none; }
+        .hover-underline::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #D90429; transition: width 0.3s ease; }
+        .hover-underline:hover::after { width: 100%; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, opacity 0.4s ease-in-out; opacity: 0; }
+        #mobile-menu.menu-open { max-height: 450px; opacity: 1; }
+        .gallery-thumb { overflow: hidden; border-radius: 2px; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-thumb:hover { transform: translateY(-4px); box-shadow: 0 10px 20px -5px rgba(0, 75, 135, 0.2); }
+        .gallery-thumb img { transition: transform 0.6s ease; }
+        .gallery-thumb:hover img { transform: scale(1.08); }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+        html.translated-ltr, body.translated-ltr { margin-top: 0px !important; padding-top: 0px !important; }
+        #google_translate_element { display: none !important; }
+    </style>
+</head>
+<body class="bg-brand-offWhite flex flex-col min-h-screen">
+    <header class="fixed w-full top-0 z-50 glass-nav shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center gap-3 group">
+                        <img src="LOGO SGS.png" alt="SGS LOGO" onerror="this.src='https://placehold.co/100x100/004B87/ffffff?text=SGS'" class="h-10 w-auto object-contain transition-transform duration-500 ease-out group-hover:scale-105">
+                        <span class="font-serif font-bold text-[13px] sm:text-xl text-blue-400 tracking-wide leading-tight">SURYA GRAHA SELARAS</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium text-gray-300 hover:text-white hover-underline transition-colors">Beranda</a>
+                    <a href="profil.html" class="text-sm font-medium text-brand-crimson transition-colors">Profil</a>
+                    <a href="tentang.html" class="text-sm font-medium text-gray-300 hover:text-white hover-underline transition-colors">Tentang</a>
+                    <div class="relative group ml-2">
+                        <button class="text-sm font-medium text-gray-300 hover:text-white flex items-center gap-1.5 transition-colors py-2">
+                            <i class="fa-solid fa-language text-lg"></i> <span id="current-lang" class="uppercase">ID</span>
+                        </button>
+                        <div class="absolute right-0 mt-0 w-36 bg-white rounded-sm shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden border-t-2 border-brand-crimson">
+                            <a href="javascript:void(0)" onclick="changeLanguage('id', 'ID')" class="block px-4 py-2.5 text-sm text-brand-navy hover:bg-brand-offWhite transition-colors">🇮🇩 Indonesia</a>
+                            <a href="javascript:void(0)" onclick="changeLanguage('en', 'EN')" class="block px-4 py-2.5 text-sm text-brand-navy hover:bg-brand-offWhite transition-colors">🇬🇧 English</a>
+                            <a href="javascript:void(0)" onclick="changeLanguage('de', 'DE')" class="block px-4 py-2.5 text-sm text-brand-navy hover:bg-brand-offWhite transition-colors">🇩🇪 Deutsch</a>
+                            <a href="javascript:void(0)" onclick="changeLanguage('ja', 'JA')" class="block px-4 py-2.5 text-sm text-brand-navy hover:bg-brand-offWhite transition-colors">🇯🇵 日本語</a>
+                            <a href="javascript:void(0)" onclick="changeLanguage('zh-CN', 'ZH')" class="block px-4 py-2.5 text-sm text-brand-navy hover:bg-brand-offWhite transition-colors">🇨🇳 中文</a>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" onclick="openConsultationModal()" class="ml-4 px-6 py-2.5 bg-brand-crimson hover:bg-brand-crimsonHover text-white text-sm font-medium transition-colors duration-300 rounded-[2px]">Hubungi</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2"><i class="fa-solid fa-bars text-xl"></i></button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden bg-brand-navy border-t border-gray-800">
+                <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                    <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-brand-crimson border-b border-gray-800">Beranda</a>
+                    <a href="profil.html" class="block px-3 py-3 text-base font-medium text-brand-crimson border-b border-gray-800">Profil</a>
+                    <a href="tentang.html" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-brand-crimson border-b border-gray-800">Tentang</a>
+                    <div class="border-b border-gray-800 pb-4 pt-2 mb-2">
+                        <p class="px-3 text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-3">Pilih Bahasa Terjemahan</p>
+                        <div class="flex flex-wrap gap-2 px-3">
+                            <button onclick="changeLanguage('id', 'ID')" class="px-3 py-1.5 bg-brand-navyLight/30 border border-brand-navyLight text-gray-300 text-xs rounded-sm hover:bg-brand-crimson hover:text-white">ID 🇮🇩</button>
+                            <button onclick="changeLanguage('en', 'EN')" class="px-3 py-1.5 bg-brand-navyLight/30 border border-brand-navyLight text-gray-300 text-xs rounded-sm hover:bg-brand-crimson hover:text-white">EN 🇬🇧</button>
+                            <button onclick="changeLanguage('de', 'DE')" class="px-3 py-1.5 bg-brand-navyLight/30 border border-brand-navyLight text-gray-300 text-xs rounded-sm hover:bg-brand-crimson hover:text-white">DE 🇩🇪</button>
+                            <button onclick="changeLanguage('ja', 'JA')" class="px-3 py-1.5 bg-brand-navyLight/30 border border-brand-navyLight text-gray-300 text-xs rounded-sm hover:bg-brand-crimson hover:text-white">JA 🇯🇵</button>
+                            <button onclick="changeLanguage('zh-CN', 'ZH')" class="px-3 py-1.5 bg-brand-navyLight/30 border border-brand-navyLight text-gray-300 text-xs rounded-sm hover:bg-brand-crimson hover:text-white">ZH 🇨🇳</button>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" onclick="openConsultationModal()" class="block w-full text-center mt-6 px-4 py-3 bg-brand-crimson text-white font-medium rounded-[2px]">Hubungi</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24 bg-white">
+        <section class="relative py-14 bg-brand-navy overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="LOGO SGS.png" alt="Background" class="w-full h-full object-cover opacity-10 mix-blend-luminosity">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-navy to-transparent"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h1 class="text-xs font-bold text-brand-crimson tracking-widest uppercase mb-2 reveal">Dokumentasi Proyek #1</h1>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-3 reveal">Pembangunan Fasilitas Industri</h2>
+                <div class="w-20 h-1 bg-brand-crimson mx-auto reveal"></div>
+            </div>
+        </section>
+
+        <section class="py-12 md:py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="border-b border-gray-100 pb-10 mb-12">
+                    <span class="inline-block px-3 py-1 bg-brand-navy/10 text-brand-navy text-xs font-bold rounded-sm uppercase tracking-wide mb-3">Struktur Beton & Sipil</span>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-brand-navy mb-4">Pembangunan Fasilitas Industri</h3>
+                    <div class="w-16 h-1 bg-brand-crimson mb-8"></div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-7">
+                            <div class="gallery-thumb rounded-sm shadow-xl bg-gray-100 overflow-hidden" onclick="openLightbox(this)">
+                                <img src="LOGO SGS.png" alt="Pembangunan Fasilitas Industri Utama" class="w-full h-80 sm:h-96 object-cover">
+                                <figcaption class="hidden">Foto Utama: Konstruksi struktur pondasi dan pilar beton fasilitas industri pabrik.</figcaption>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-5 space-y-4 text-gray-600 text-sm leading-relaxed text-justify">
+                            <p>
+                                Dalam proyek ini, PT. Surya Graha Selaras bertanggung jawab penuh atas pembangunan struktur beton bertulang dari nol (0) hingga tahap penyelesaian (*finishing*). Pengerjaan mencakup persiapan lahan, pembuatan pondasi *bore pile*, pengecoran kolom struktur utama, hingga pelat lantai pabrik yang dirancang khusus menahan beban operasional mesin berat berkapasitas tinggi.
+                            </p>
+                            <p>
+                                Ketepatan waktu (*timeline*) dan pengujian kualitas material secara berkala (uji *slump* dan tekan beton berkala) menjadi kunci keberhasilan konstruksi ini. Fasilitas kini telah beroperasi melayani kebutuhan manufaktur klien secara optimal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-serif font-bold text-brand-navy mb-4">
+                        Dokumentasi Terkait Pengerjaan Fasilitas Industri
+                    </h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <figure class="gallery-thumb bg-gray-50 border border-gray-200 p-1 rounded-sm" onclick="openLightbox(this)">
+                            <img src="LOGO SGS.png" alt="Pengecoran Pondasi" class="w-full h-40 object-cover">
+                            <figcaption class="p-2 text-xs text-gray-600 font-medium truncate">Pengecoran Pondasi Beton</figcaption>
+                        </figure>
+                        <figure class="gallery-thumb bg-gray-50 border border-gray-200 p-1 rounded-sm" onclick="openLightbox(this)">
+                            <img src="LOGO SGS.png" alt="Pemasangan Besi Tulangan" class="w-full h-40 object-cover">
+                            <figcaption class="p-2 text-xs text-gray-600 font-medium truncate">Perakitan Besi Tulangan Kolom</figcaption>
+                        </figure>
+                        <figure class="gallery-thumb bg-gray-50 border border-gray-200 p-1 rounded-sm" onclick="openLightbox(this)">
+                            <img src="LOGO SGS.png" alt="Uji Kualitas Beton" class="w-full h-40 object-cover">
+                            <figcaption class="p-2 text-xs text-gray-600 font-medium truncate">Uji Slump & Mutu Beton</figcaption>
+                        </figure>
+                        <figure class="gallery-thumb bg-gray-50 border border-gray-200 p-1 rounded-sm" onclick="openLightbox(this)">
+                            <img src="LOGO SGS.png" alt="Pengecoran Lantai Gudang" class="w-full h-40 object-cover">
+                            <figcaption class="p-2 text-xs text-gray-600 font-medium truncate">Finishing Plat Lantai Beban Berat</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-navyLight border-t border-gray-800 text-gray-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="LOGO SGS.png" alt="SGS LOGO" onerror="this.src='https://placehold.co/100x100/004B87/ffffff?text=SGS'" class="h-8 w-auto object-contain">
+                        <span class="font-serif font-bold text-lg text-blue-400">SURYA GRAHA SELARAS</span>
+                    </div>
+                    <p class="text-sm text-brand-slate leading-relaxed mb-6">Komitmen terhadap kualitas dan layanan pelanggan telah menjadi pondasi utama dalam membangun hubungan jangka panjang dengan mitra bisnis.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Kantor Pusat</h4>
+                    <address class="not-italic text-sm text-brand-slate space-y-3">
+                        <div class="block space-y-1"><p>JL. Aster B9 No. 16-17 Karang Mas Indah</p><p>Karawang</p><p>Cikampek, 41373</p></div>
+                        <p class="pt-2"><a href="tel:+622648388888" class="hover:text-brand-crimson transition-colors">(0264) 8388888</a></p>
+                        <p><a href="mailto:surya.selaras@yahoo.com" class="hover:text-brand-crimson transition-colors">surya.selaras@yahoo.com</a></p>
+                    </address>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Kantor Cabang</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><span class="text-brand-slate">Manukan Rejo Blok2a/3, Kel. Tandes, Kec. Tandes Surabaya - Jawa Timur R. Sudarmawan</span></li>
+                        <li><a href="https://wa.me/6281357415161" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors text-brand-slate mt-2">+62 813 - 5741 - 5161</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-medium mb-6 uppercase tracking-wider text-xs">Kepatuhan</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" onclick="openPrivacyModal(event)" class="hover:text-white transition-colors cursor-pointer">Kebijakan Privasi</a></li>
+                        <li><a href="#" onclick="openTermsModal(event)" class="hover:text-white transition-colors cursor-pointer">Syarat Penggunaan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-brand-slate">&copy; <span id="year"></span> Surya Graha Selaras. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm font-medium"><span class="text-brand-slate cursor-default">LinkedIn</span><span class="text-brand-slate cursor-default">Twitter / X</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center bg-black/95 px-4 opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/50 hover:text-brand-crimson transition-colors z-[112]"><i class="fa-solid fa-xmark text-4xl"></i></button>
+        <div class="max-w-6xl w-full relative z-[111] flex flex-col items-center transform scale-95 transition-transform duration-300" id="lightbox-content">
+            <img id="lightbox-img" src="" class="max-w-full max-h-[80vh] object-contain shadow-2xl rounded-sm" alt="Dokumentasi Diperbesar">
+            <p id="lightbox-caption" class="text-gray-300 text-center mt-6 text-base font-bold tracking-wide max-w-3xl"></p>
+        </div>
+    </div>
+
+    <!-- Modal Konsultasi -->
+    <div id="consultation-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-brand-navy/80 backdrop-blur-sm px-4">
+        <div class="bg-brand-navy border border-gray-800 max-w-lg w-full shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[90vh]" id="consultation-modal-content">
+            <div class="px-6 py-4 border-b border-gray-800 flex justify-between items-center bg-brand-navy">
+                <h3 class="font-serif font-bold text-white text-xl">Inisiasi Dialog</h3>
+                <button onclick="closeConsultationModal()" class="text-gray-400 hover:text-brand-crimson transition-colors"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto">
+                <p class="text-sm text-gray-400 mb-6">Silakan lengkapi formulir di bawah ini untuk mendiskusikan kebutuhan operasional Anda bersama kami.</p>
+                <form id="contactForm" class="space-y-4">
+                    <div><label for="nama" class="block text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">Nama Representatif</label><input type="text" id="nama" name="nama" required class="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:outline-none focus:border-brand-crimson transition-colors" placeholder="Masukkan nama Anda"></div>
+                    <div><label for="perusahaan" class="block text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">Entitas Perusahaan</label><input type="text" id="perusahaan" name="perusahaan" required class="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:outline-none focus:border-brand-crimson transition-colors" placeholder="Nama perusahaan Anda"></div>
+                    <div><label for="email" class="block text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">Email Korporat</label><input type="email" id="email" name="email" required class="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:outline-none focus:border-brand-crimson transition-colors" placeholder="email@perusahaan.com"></div>
+                    <div><label for="alamat" class="block text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">Alamat / Lokasi Proyek</label><input type="text" id="alamat" name="alamat" required class="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:outline-none focus:border-brand-crimson transition-colors" placeholder="Kota atau detail alamat lokasi"></div>
+                    <div><label for="catatan" class="block text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">Catatan / Detail Kebutuhan</label><textarea id="catatan" name="catatan" rows="3" required class="w-full bg-transparent border-b border-gray-600 text-white py-2 focus:outline-none focus:border-brand-crimson transition-colors resize-none" placeholder="Jelaskan kebutuhan Anda..."></textarea></div>
+                    <div class="pt-4"><button type="submit" id="submitBtn" class="bg-brand-crimson hover:bg-brand-crimsonHover text-white px-8 py-3.5 font-medium transition duration-300 w-full rounded-[2px] shadow-lg flex justify-center items-center">Kirim Pesan</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals Privasi & Terms -->
+    <div id="privacy-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-brand-navy/80 backdrop-blur-sm px-4">
+        <div class="bg-white max-w-2xl w-full shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[80vh]" id="privacy-modal-content">
+            <div class="px-6 py-4 border-b border-brand-navy/10 flex justify-between items-center bg-brand-offWhite">
+                <h3 class="font-serif font-bold text-brand-navy text-xl">Kebijakan Privasi</h3><button onclick="closePrivacyModal()" class="text-brand-navy/50 hover:text-brand-crimson"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm text-gray-700 space-y-4 leading-relaxed">
+                <p>PT. Surya Graha Selaras berkomitmen melindungi kerahasiaan dan privasi data klien dalam seluruh layanan konstruksi dan industri.</p>
+            </div>
+            <div class="bg-brand-offWhite px-6 py-4 border-t border-brand-navy/10"><button onclick="closePrivacyModal()" class="w-full bg-brand-navy text-white py-2 rounded-[2px]">Tutup</button></div>
+        </div>
+    </div>
+
+    <div id="terms-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-brand-navy/80 backdrop-blur-sm px-4">
+        <div class="bg-white max-w-2xl w-full shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300 flex flex-col max-h-[80vh]" id="terms-modal-content">
+            <div class="px-6 py-4 border-b border-brand-navy/10 flex justify-between items-center bg-brand-offWhite">
+                <h3 class="font-serif font-bold text-brand-navy text-xl">Syarat Penggunaan</h3><button onclick="closeTermsModal()" class="text-brand-navy/50 hover:text-brand-crimson"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="p-6 overflow-y-auto text-sm text-gray-700 space-y-4 leading-relaxed">
+                <p>Seluruh materi di situs ini adalah hak milik intelektual PT. Surya Graha Selaras.</p>
+            </div>
+            <div class="bg-brand-offWhite px-6 py-4 border-t border-brand-navy/10"><button onclick="closeTermsModal()" class="w-full bg-brand-navy text-white py-2 rounded-[2px]">Setuju & Tutup</button></div>
+        </div>
+    </div>
+
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'id', includedLanguages: 'id,en,de,ja,zh-CN', autoDisplay: false }, 'google_translate_element'); }
+        function changeLanguage(langCode, displayLang) {
+            const currentLangDisplay = document.getElementById('current-lang');
+            if(currentLangDisplay) currentLangDisplay.innerText = displayLang;
+            const selectField = document.querySelector("select.goog-te-combo");
+            if (selectField) { selectField.value = langCode; selectField.dispatchEvent(new Event('change')); }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        // Lightbox
+        const lightbox = document.getElementById('lightbox-modal'), lightboxImg = document.getElementById('lightbox-img'), lightboxCaption = document.getElementById('lightbox-caption'), lightboxContent = document.getElementById('lightbox-content');
+        function openLightbox(el) {
+            const img = el.querySelector('img'), cap = el.querySelector('figcaption');
+            lightboxImg.src = img.src; lightboxCaption.textContent = cap ? cap.textContent : '';
+            lightbox.classList.remove('hidden'); document.body.style.overflow = 'hidden';
+            setTimeout(() => { lightbox.classList.remove('opacity-0'); lightboxContent.classList.remove('scale-95'); lightboxContent.classList.add('scale-100'); }, 10);
+        }
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0'); lightboxContent.classList.remove('scale-100'); lightboxContent.classList.add('scale-95');
+            setTimeout(() => { lightbox.classList.add('hidden'); document.body.style.overflow = ''; lightboxImg.src = ''; }, 300);
+        }
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => { if(e.key === "Escape" && !lightbox.classList.contains('hidden')) closeLightbox(); });
+
+        // Consultation Form Submit AJAX
+        const contactForm = document.getElementById('contactForm'), submitBtn = document.getElementById('submitBtn');
+        if(contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm); formData.append("_subject", "Pesan Baru dari Website PT SGS");
+                const originalText = submitBtn.innerHTML; submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Mengirim...';
+                fetch("https://formsubmit.co/ajax/surya.selaras@yahoo.com", { method: "POST", body: formData })
+                .then(res => res.json()).then(() => {
+                    submitBtn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Pesan Terkirim';
+                    submitBtn.classList.add('bg-green-600'); contactForm.reset();
+                    setTimeout(() => { submitBtn.innerHTML = originalText; submitBtn.classList.remove('bg-green-600'); closeConsultationModal(); }, 3500);
+                }).catch(() => { submitBtn.innerHTML = 'Gagal Mengirim'; setTimeout(() => { submitBtn.innerHTML = originalText; }, 3000); });
+            });
+        }
+        const consultationModal = document.getElementById('consultation-modal'), consultationModalContent = document.getElementById('consultation-modal-content');
+        function openConsultationModal(e) { if(e) e.preventDefault(); document.body.style.overflow = 'hidden'; consultationModal.classList.remove('hidden'); setTimeout(() => { consultationModalContent.classList.remove('scale-95', 'opacity-0'); consultationModalContent.classList.add('scale-100', 'opacity-100'); }, 10); }
+        function closeConsultationModal() { document.body.style.overflow = ''; consultationModalContent.classList.remove('scale-100', 'opacity-100'); consultationModalContent.classList.add('scale-95', 'opacity-0'); setTimeout(() => { consultationModal.classList.add('hidden'); }, 300); }
+        consultationModal.addEventListener('click', (e) => { if (e.target === consultationModal) closeConsultationModal(); });
+
+        function openPrivacyModal(e) { if(e) e.preventDefault(); document.getElementById('privacy-modal').classList.remove('hidden'); }
+        function closePrivacyModal() { document.getElementById('privacy-modal').classList.add('hidden'); }
+        function openTermsModal(e) { if(e) e.preventDefault(); document.getElementById('terms-modal').classList.remove('hidden'); }
+        function closeTermsModal() { document.getElementById('terms-modal').classList.add('hidden'); }
+
+        const btn = document.getElementById('mobile-menu-btn'), menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('menu-open'); });
+    </script>
+</body>
+</html>
